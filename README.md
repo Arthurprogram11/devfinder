@@ -2,6 +2,14 @@
 
 Aplicação web responsiva para pesquisar perfis públicos do GitHub e salvar desenvolvedores favoritos no navegador.
 
+## Aplicação publicada
+
+[Acessar o DevFinder](https://arthurprogram11.github.io/devfinder/)
+
+## Demonstração
+
+![Demonstração do DevFinder](devfinder-preview.png)
+
 ## Funcionalidades
 
 - Pesquisa de usuários pela GitHub REST API;

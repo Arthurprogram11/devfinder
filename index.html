@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Pesquise desenvolvedores no GitHub e salve seus perfis favoritos."
+    >
+    <title>DevFinder | Encontre desenvolvedores no GitHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container header-content">
+            <a class="brand" href="#" aria-label="Ir para o início do DevFinder">
+                <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+                <span>DevFinder</span>
+            </a>
+
+            <p>Encontre desenvolvedores pelo GitHub</p>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="eyebrow">GitHub Profile Search</p>
+            <h1 id="hero-title">Descubra perfis de desenvolvedores</h1>
+            <p class="hero-description">
+                Digite um username do GitHub para visualizar informações públicas
+                e salvar seus perfis favoritos.
+            </p>
+
+            <form id="search-form" class="search-form" novalidate>
+                <label for="username">Username do GitHub</label>
+
+                <div class="search-controls">
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Ex.: octocat"
+                        autocomplete="off"
+                        aria-describedby="search-message"
+                    >
+
+                    <button id="search-button" type="submit">
+                        Buscar perfil
+                    </button>
+                </div>
+
+                <p
+                    id="search-message"
+                    class="status"
+                    role="status"
+                    aria-live="polite"
+                >Digite um username para começar.</p>
+            </form>
+        </section>
+
+        <section
+            id="profile-section"
+            class="profile-section"
+            aria-labelledby="profile-title"
+            hidden
+        >
+            <h2 id="profile-title" class="section-title">Perfil encontrado</h2>
+            <article id="profile-card" class="profile-card"></article>
+        </section>
+
+        <section class="favorites-section" aria-labelledby="favorites-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Salvos no navegador</p>
+                    <h2 id="favorites-title" class="section-title">Favoritos</h2>
+                </div>
+
+                <span id="favorites-count" class="favorites-count">0 perfis</span>
+            </div>
+
+            <ul id="favorites-list" class="favorites-list"></ul>
+
+            <div id="empty-favorites" class="empty-state">
+                <span aria-hidden="true">☆</span>
+                <p>Você ainda não salvou nenhum perfil.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>Desenvolvido com HTML, CSS, JavaScript e GitHub REST API.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
